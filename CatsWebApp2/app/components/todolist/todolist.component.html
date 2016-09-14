@@ -1,0 +1,23 @@
+﻿<div *ngIf="haserror" class="alert alert-danger alert-dismissible" role="alert">
+    <div [innerHTML]="errormsg"></div>
+</div>
+<form *ngIf="!haserror && hasSelectedList">
+    <table class="datas">
+        <tr class="list-group-item" *ngFor="let item of selectedList">
+            <td>
+                <h2>{{item.OwnerGender}}</h2>
+                <div *ngIf="item.PetNames.length == 0">
+                    <i>No pets listed</i>
+                </div>
+                <div *ngIf="item.PetNames.length > 0">
+                    <table class="petnames">
+                        <tr *ngFor="let pets of item.PetNames">
+                            <td><li>{{pets}}</li></td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+    </table>
+</form>
+  

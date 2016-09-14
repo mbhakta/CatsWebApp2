@@ -1,0 +1,21 @@
+﻿@*@section title{
+    Angular2 Version
+}*@
+
+
+<div class="jumbotron">
+    <h1>CatsWeb Application</h1>
+    <p class="lead">Is a coding demo by Mukesh Bhakta in ASP.NET MVC using AngularJS 2 to demonstrate the effective use of JSON deserialization and LINQ.</p>
+</div>
+
+@section scripts{
+    @Html.Partial("DefineAngular")
+    <script>
+        System.import('app/boottodolist');
+    </script>
+}
+<todolist class="todolistcontent">
+    <div class="waitloading">
+        loading...
+    </div>
+</todolist>
